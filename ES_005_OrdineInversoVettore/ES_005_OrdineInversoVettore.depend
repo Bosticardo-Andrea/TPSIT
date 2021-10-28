@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1634717753 source:c:\users\andre\desktop\scuola\superiori\classe 4^a\tpsit\laboratorio\esercizi\es_005_ordineinversovettore\main.c
+	<stdio.h>
+	<stdlib.h>
+

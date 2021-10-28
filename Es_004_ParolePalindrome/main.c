@@ -12,8 +12,8 @@ bool verifica(char str[], int n) {
     bool ver = false;
     int i = 0;
     while(i < n && ver == false){
-        if(str[i] != ' ') {
-                if(str[i] != str[n-i-1]){
+        if(*(str+i ) != ' ') {
+                if(*(str+i ) != *(str + (n-i-1))){
                     ver = true;
                 }
         }
@@ -21,12 +21,26 @@ bool verifica(char str[], int n) {
     }
     return ver;
 }
+void togliSpazio(char str[],char str1[],int *n,int m){
+    for(int i = 0; i < m; i++){
+       if(*(str+i) != ' '){
+        *(str1+*n) = *(str+i);
+        *n = *n+1;
+     }
+    }
+}
 int main() {
     char str[LUNG];
+    char str1[LUNG];
+    int n = 0;
 
     printf("Inserisci la stringa: ");
-    scanf("%s",&str);
-    if(verifica(str,strlen(puts)) == true) {
+    gets(str);
+
+    strlwr(str);
+    togliSpazio(str,str1,&n,strlen(str));
+
+    if(verifica(str1,n) == true) {
             printf("Non e' palindroma");
     }else{
         printf("E' palindroma");
