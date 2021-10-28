@@ -1,13 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define DIM 100
 int numero(){
     int n = 0;
     do{
     printf("insersci il numero di numeri:");
     scanf("%d",&n);
-    }while(n < 0 && n >
-            DIM);
+    }while(n < 0);
     return n;
 }
 void inserisci(int vett[],int n){
@@ -23,9 +21,9 @@ void scambia(int v[],int v1[],int n){
 }
 int main()
 {
-    int vett[DIM];
-    int vett1[DIM];
     int n = numero();
+    int *vett = (int*) malloc(n* sizeof(int));
+    int *vett1 = (int*) malloc(n* sizeof(int));
     inserisci(vett,n);
     scambia(vett,vett1,n);
 
