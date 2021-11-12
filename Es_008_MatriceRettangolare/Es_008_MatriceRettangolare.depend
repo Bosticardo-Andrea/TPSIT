@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1635503701 source:c:\users\andre\desktop\scuola\superiori\classe 4^a\trimestre\tpsit\laboratorio\esercizi\es_008_matricerettangolare\main.c
+	<stdio.h>
+	<stdlib.h>
+

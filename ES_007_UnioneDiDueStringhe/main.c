@@ -6,7 +6,7 @@ int main()
 {
     char str1[LUNG];
     char str2[LUNG];
-    int n = 0;
+    int n =7 0;
 
     printf("inserisci la prima stringa: ");
     gets(str1);
