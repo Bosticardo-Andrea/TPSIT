@@ -6,11 +6,11 @@ int main()
     char *car;
     int *x;
 
-    car = (char *) malloc(1*sizeof(char));
+    car = (char *) malloc(sizeof(char));
     *car = 'a';
     printf("%c\n",*car);
 
-    car = (int *) malloc(1*sizeof(int));
+    x = (int *) malloc(sizeof(int));
     *x = 5;
     printf("%d",*x);
 
