@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1635433408 source:c:\users\andre\desktop\scuola\superiori\classe 4^a\trimestre\tpsit\laboratorio\esercizi\es_007_unionediduestringhe\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
