@@ -1,3 +1,4 @@
+//made by Andrea Bosticardo
 #include <stdio.h>
 #include <stdlib.h>
 #define DIM 20
@@ -12,19 +13,19 @@ typedef struct{
     char cognome[DIM];
     int matricola;
 } Studente;
-void leggi(Studente s[], int n){
+void leggi(Studente s[], int n){//faccio inserire i dati
     for(int i = 0; i < n; i++){
-        printf("Inserisci il nome: ");
+        printf("Inserisci il nome: ");//inserisco il nome
         scanf("%s",s[i].nome);
-        printf("Inserisci il cognome: ");
+        printf("Inserisci il cognome: ");//inserisco il cognome
         scanf("%s",s[i].cognome);
         do{
-        printf("Inserisci il numero di matricola: ");
+        printf("Inserisci il numero di matricola: ");//inserisco il numero della matricola
         scanf("%d",&s[i].matricola);
         }while(s[i].matricola < 0);
     }
 }
-int dimensione(int max){
+int dimensione(int max){//numero di studenti
     int n = 0;
     do{
         printf("quanti studenti vuoi inserire? ");
@@ -32,7 +33,7 @@ int dimensione(int max){
     }while(n < 0 && n > max);
     return n;
 }
-void stampa(Studente s[], int n){
+void stampa(Studente s[], int n){//stampo il tutto
     for(int i = 0; i < n; i++){
         printf("%s %s %d\n",s[i].cognome,s[i].nome,s[i].matricola);
 
