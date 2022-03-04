@@ -1,4 +1,6 @@
+//made by Andrea Bosticardo
 #include <stdio.h>
+#include <stdlib.h>
 struct elem {
     char *nome;
     struct elem *next;

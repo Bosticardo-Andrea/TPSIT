@@ -1,6 +1,7 @@
+//made by Andrea Bosticardo
 #include <stdio.h>
 #include <stdlib.h>
-
+//prova allocazione dinamica
 int main()
 {
     char *car;
