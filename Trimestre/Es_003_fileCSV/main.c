@@ -1,3 +1,4 @@
+//made by Andrea Bosticardo
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -64,7 +65,7 @@ void spezza(char riga[LUNG], int *num, Film f[]) {
     }
 
 }
-int nRighe(char nome[],int max){
+int nRighe(char nome[],int max){//trovo il numero di righe
     int num = 0;
     FILE *fp;
     char riga[max];

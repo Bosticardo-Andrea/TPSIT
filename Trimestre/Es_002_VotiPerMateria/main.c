@@ -1,3 +1,4 @@
+//made by Andrea Bosticardo
 #include <stdio.h>
 #include <stdlib.h>
 #define DIM 20
@@ -8,6 +9,8 @@ Italiano, Matematica, e Informatica.
 Si scriva una funzione in C che, a partire da un vettore di studenti fornito come argomento,
  determina la disciplina che ha la media piu alta.
 */
+
+//struttura studenti
 typedef struct {
     char nome [DIM];
     int ita[MAX_STD/5];
@@ -15,14 +18,14 @@ typedef struct {
     int info[MAX_STD/5];
     int mi,minf,mm;
 } Studente;
-
+//inserisco i dati nello studente
 void leggi(Studente s[], int n, int *it, int *inf, int *m) {
     int num = 0;
     for(int i = 0; i < n; i++) {
-        printf("Inserisci il nome: ");
+        printf("Inserisci il nome: ");//inserisco il nome
         scanf("%s",s[i].nome);
 
-        printf("Inserisci quanti voti per ita: ");
+        printf("Inserisci quanti voti per ita: ");//inserisco la materia Italiano
         scanf("%d",&num);
         for(int k = 0; k < num; k++) {
             do {
@@ -31,7 +34,7 @@ void leggi(Studente s[], int n, int *it, int *inf, int *m) {
             } while(s[i].ita[k] < 0);
         }
         *it = num;
-        printf("Inserisci quanti voti per mate: ");
+        printf("Inserisci quanti voti per mate: ");//inserisco la materia matematica
         scanf("%d",&num);
         for(int k = 0; k < num; k++) {
             do {
@@ -40,7 +43,7 @@ void leggi(Studente s[], int n, int *it, int *inf, int *m) {
             } while(s[i].ita[k] < 0);
         }
         *m = num;
-        printf("Inserisci quanti voti per info: ");
+        printf("Inserisci quanti voti per info: ");//inserisco la materia informatica
         scanf("%d",&num);
         for(int k = 0; k < num; k++) {
             do {
@@ -51,7 +54,7 @@ void leggi(Studente s[], int n, int *it, int *inf, int *m) {
     }
     *inf = num;
 }
-int dimensione(int max) {
+int dimensione(int max) {//inizializzo il numero di studenti che voglio inserire
     int n = 0;
     do {
         printf("quanti studenti vuoi inserire? ");
@@ -59,7 +62,7 @@ int dimensione(int max) {
     } while(n < 0 && n > max);
     return n;
 }
-void media(Studente s[], int ni, int inf, int mat,int n) {
+void media(Studente s[], int ni, int inf, int mat,int n) {//faccio la media dei voti
     int sm,si,sinf;
     sm = 0;
     si = 0;
@@ -82,7 +85,7 @@ void media(Studente s[], int ni, int inf, int mat,int n) {
         s[k].mm = sm/ni;
     }
 }
-void stampa(Studente s[], int n) {
+void stampa(Studente s[], int n) {//stampo il tutto
     for(int i = 0; i < n; i++) {
         if(s[i].mi > s[i].minf) {
             if(s[i].mi > s[i].mm){

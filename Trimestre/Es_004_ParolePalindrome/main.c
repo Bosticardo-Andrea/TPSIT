@@ -1,3 +1,4 @@
+//made by Andrea Bosticardo
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -8,11 +9,11 @@ Scrivere un programma che verifichi se la stringa data in input è palindroma o n
 Scrivere un programma che chieda n valori interi (massimo 100, li collochi in un vettore e inverta il vettore (scambiando il primo elemento con l’ultimo il secondo con il penultimo…). Si usino i puntatori
 Scrivere un programma che data una stringa in input dica se la stessa contiene almeno una ‘A’ tra i primi 10 caratteri.
 */
-bool verifica(char str[], int n) {
+bool verifica(char str[], int n) { //verifico se palindorma
     bool ver = false;
     int i = 0;
     while(i < n && ver == false){
-        if(*(str+i ) != ' ') {
+        if(*(str+i ) != ' ') {//controllo la stringa al contrario
                 if(*(str+i ) != *(str + (n-i-1))){
                     ver = true;
                 }
@@ -21,9 +22,9 @@ bool verifica(char str[], int n) {
     }
     return ver;
 }
-void togliSpazio(char str[],char str1[],int *n,int m){
+void togliSpazio(char str[],char str1[],int *n,int m){//tolgo gli spazi per verificare una frase e non solo una parola
     for(int i = 0; i < m; i++){
-       if(*(str+i) != ' '){
+       if(*(str+i) != ' '){//rimuovo gli spazi
         *(str1+*n) = *(str+i);
         *n = *n+1;
      }
@@ -35,12 +36,12 @@ int main() {
     int n = 0;
 
     printf("Inserisci la stringa: ");
-    gets(str);
+    gets(str);//prendo le stringhe con spazi
 
     strlwr(str);
-    togliSpazio(str,str1,&n,strlen(str));
+    togliSpazio(str,str1,&n,strlen(str));//tolgo gl spazi
 
-    if(verifica(str1,n) == true) {
+    if(verifica(str1,n) == true) {//controllo e stampo il risultato
             printf("Non e' palindroma");
     }else{
         printf("E' palindroma");
