@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1634717465 source:c:\users\andre\desktop\scuola\superiori\classe 4^a\tpsit\laboratorio\esercizi\es_007_aneiprimi10caratteri\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdbool.h>
+
