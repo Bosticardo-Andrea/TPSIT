@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1634556383 source:c:\users\andre\desktop\scuola\superiori\classe 4^a\tpsit\laboratorio\esercizi\es_003_filecsv\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
