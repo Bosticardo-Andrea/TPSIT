@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1641206827 source:c:\users\andre\onedrive - itiscuneo.eu\scuola\superiori\classe 4^a\trimestre\compiti della vacanze di natale\tpsit\es_003\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdbool.h>
+
