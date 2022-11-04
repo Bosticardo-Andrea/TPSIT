@@ -1,6 +1,5 @@
 import socket
 from threading import Thread
-
 def get_key(val,dizioIPNome): 
     for key, value in dizioIPNome.items():
         if val == value:return key
@@ -44,7 +43,6 @@ class MyThread(Thread):
                         self.connection.sendall(mex.encode())
     def stop(self):
         self.running = False
-
 thread,dizio,dizioIPNome = [],{},letturaFilePerIP()
 def main():
     s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
