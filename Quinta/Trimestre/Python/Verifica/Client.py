@@ -15,5 +15,3 @@ while 1:
         except:pass
         # invio il risultato al server
         s.sendto(str(sol).encode(),("127.0.0.1",5000))
-
-    
