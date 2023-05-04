@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Visualizzazione LaTeX in Flask</title>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+<body>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #F8F8F8;
+			margin: 0;
+			padding: 0;
+		}
+		
+		.container {
+			margin: 50px auto;
+			width: 60%;
+			background-color: #FFF;
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+		}
+		
+		h1 {
+			font-size: 36px;
+			text-align: center;
+			margin-bottom: 30px;
+			color: #333;
+		}
+		
+		label {
+			display: block;
+			font-size: 18px;
+			color: #333;
+			margin-bottom: 10px;
+		}
+		
+		input[type="text"] {
+			font-size: 18px;
+			padding: 10px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			width: 100%;
+			margin-bottom: 20px;
+		}
+		
+		button[type="submit"] {
+			background-color: #008CBA;
+			color: #FFF;
+			font-size: 18px;
+			padding: 10px 20px;
+			border-radius: 5px;
+			border: none;
+			cursor: pointer;
+		}
+		
+		button[type="submit"]:hover {
+			background-color: #006A8E;
+		}
+	</style>
+	<div class="container">
+	<form action="" method="post">
+		
+	<label for="Integrale">Integrale:</label>
+	<input type="text" id="f" name="f">
+
+	<label for="a">a:</label>
+	<input type="text" id="a" name="a">
+
+	<label for="b">b:</label>
+	<input type="text" id="b" name="b">
+
+	<button type="submit" id="Calcola" name="Calcola" value="Calcola">Calcola</button>
+	
+	<p>formula matematica: $${{formula}}$$</p>
+	<p>Risultato: $${{ris}}$$</p>
+</body>
+</html>
+	
