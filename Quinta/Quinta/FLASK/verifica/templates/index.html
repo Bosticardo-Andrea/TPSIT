@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Textbox e slider</title>
+</head>
+<style>
+	body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+	}
+	form {
+			margin: 50px;
+			padding: 20px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			background-color: #f8f8f8;
+			max-width: 400px;
+		}
+	label {
+		display: block;
+		margin-bottom: 10px;
+		font-weight: bold;
+		color: #333;
+	}
+
+	input[type="text"] {
+		padding: 5px;
+		border: 1px solid #ccc;
+		border-radius: 3px;
+		margin-bottom: 10px;
+		font-size: 16px;
+		width: 100%;
+		box-sizing: border-box;
+	}
+
+	button {
+		background-color: #4CAF50;
+		color: #fff;
+		border: none;
+		padding: 10px 20px;
+		border-radius: 5px;
+		font-size: 16px;
+		cursor: pointer;
+		margin-right: 10px;
+	}
+
+	button:hover {
+		background-color: #3e8e41;
+	}
+
+	.error {
+		color: red;
+		margin-top: 10px;
+	}
+</style>
+
+</style>
+<body>
+	<form action="" method="post">
+		<label for="verde">Durata verde:</label>
+		<input type="text" id="verde" name="verde" placeholder="es: 1s">
+
+		<label for="giallo">Durata giallo:</label>
+		<input type="text" id="giallo" name="giallo" placeholder="es: 1s">
+	
+		<label for="rosso">Durata rosso:</label>
+		<input type="text" id="rosso" name="rosso" placeholder="es: 1s">
+	
+		<label for="stato">ACCESO/SPENTO:</label>
+		<input type="text" id="stato" name="stato" placeholder="ACCESO/SPENTO">
+	
+		<button type="submit" id="Invia" name="Invia" value="Invia">Testa</button>
+	</form>
+	{% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+    {% endif %}
+</body>
+</html>
